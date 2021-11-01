@@ -1,5 +1,7 @@
 # miivii-Xavier
 
+![](https://img.shields.io/badge/ROS-workspaces-yellow) ![](https://img.shields.io/badge/C%2B%2B-11-brightgreen) ![](https://img.shields.io/badge/Python-3-blue) ![](https://img.shields.io/badge/Qt-5-green)
+
 小车相关代码备份，以及数据采集等相关说明
 
 ## 数据采集说明
