@@ -430,7 +430,7 @@ class PostProcessor(object):
         #         dst_real.append([dis_real_heng[index], self.dis_real_zong[index]])
         #     self.lane_positions.append(dst_real)
         #
-        # # self.show_result(source_image=source_image, fit_params=self.fit_params)
+        # self.show_result(source_image=source_image, fit_params=self.fit_params)
 
         # cv2.imshow('source_image', source_image)
         # cv2.waitKey(10)

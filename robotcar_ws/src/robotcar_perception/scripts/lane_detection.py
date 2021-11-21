@@ -133,7 +133,7 @@ if __name__ == '__main__':
         while 1:
             # time_1 = time.time()
             transform_result = lanes()
-            msg = rospy.wait_for_message("/miivii_gmsl_ros_A/camera1_raw", Image, timeout=None)
+            msg = rospy.wait_for_message("/miivii_gmsl_ros_A/camera1", Image, timeout=None)
             transform_result.stamp = msg.header.stamp
 
             bridge = CvBridge()

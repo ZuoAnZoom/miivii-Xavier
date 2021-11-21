@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 #coding:utf-8
 
 import roslib;  
@@ -10,7 +11,8 @@ from cv_bridge import CvBridge
 from cv_bridge import CvBridgeError
 
 # [需要修改的位置1], 注意一定要以/结尾
-path='/media/nvidia/Extreme SSD/210114/right/' #存放图片的位置
+# path='/media/nvidia/Extreme SSD/211105/left/' #存放图片的位置
+path='/home/nvidia/workspace/211105/left/' #存放图片的位置
 
 class ImageCreator():
 
@@ -19,10 +21,10 @@ class ImageCreator():
        self.bridge = CvBridge()
        i = 0
        # [需要修改的位置2]
-       with rosbag.Bag('/home/nvidia/workspace/2021-01-14-20-00-37.bag', 'r') as bag:   #要读取的bag文件；
+       with rosbag.Bag('/home/nvidia/workspace/2021-11-05-17-24-40.bag', 'r') as bag:   #要读取的bag文件；
            for topic,msg,t in bag.read_messages():
                # [需要修改的位置3]
-               if topic == "/miivii_gmsl_ros_A/camera2":  #图像的topic；
+               if topic == "/miivii_gmsl_ros_A/camera1":  #图像的topic；
                        try:
                            cv_image = self.bridge.imgmsg_to_cv2(msg,"bgr8")
                        except CvBridgeError as e:
